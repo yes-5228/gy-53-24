@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    container_name: parking_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - parking_data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: /api
+    container_name: parking_frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  parking_data:
