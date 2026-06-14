@@ -12,4 +12,5 @@ export const parkingApi = {
   exit: (id, payload) => http.post(`/parking/exit/${id}`, payload),
   getInvoices: () => http.get("/invoices"),
   createInvoice: (payload) => http.post("/invoices", payload),
+  getDailyRevenue: () => http.get("/parking/revenue/daily"),
 };

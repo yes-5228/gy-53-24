@@ -1,9 +1,10 @@
 <script setup>
 import { computed, ref } from "vue";
-import { BadgeDollarSign, Car, FileText, IdCard } from "lucide-vue-next";
+import { BadgeDollarSign, BarChart3, Car, FileText, IdCard } from "lucide-vue-next";
 import InvoicePage from "./pages/InvoicePage.vue";
 import MonthlyCardPage from "./pages/MonthlyCardPage.vue";
 import ParkingBillingPage from "./pages/ParkingBillingPage.vue";
+import RevenueDashboardPage from "./pages/RevenueDashboardPage.vue";
 import SpaceMonitorPage from "./pages/SpaceMonitorPage.vue";
 
 const current = ref("spaces");
@@ -11,6 +12,7 @@ const tabs = [
   { key: "spaces", label: "车位监控", icon: Car, component: SpaceMonitorPage },
   { key: "cards", label: "月卡办理", icon: IdCard, component: MonthlyCardPage },
   { key: "billing", label: "临停计费", icon: BadgeDollarSign, component: ParkingBillingPage },
+  { key: "revenue", label: "日营收看板", icon: BarChart3, component: RevenueDashboardPage },
   { key: "invoices", label: "电子发票", icon: FileText, component: InvoicePage },
 ];
 

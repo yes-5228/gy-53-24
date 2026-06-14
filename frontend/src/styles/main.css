@@ -140,7 +140,7 @@ select {
 .stat-grid {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
 }
 
 .stat-card,
